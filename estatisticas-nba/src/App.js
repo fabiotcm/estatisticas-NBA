@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Routes>
-          <Route path='/' component={Login}/>
+          <Route path='/' Component={Login}/>
         </Routes>
       </BrowserRouter>
     );
