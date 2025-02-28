@@ -1,4 +1,6 @@
 import React from "react";
+import Logo from "../components/Logo";
+import "./css/pages.css"
 import { Navigate } from "react-router-dom";
 
 
@@ -58,6 +60,11 @@ class Login extends React.Component {
     }
 
     return(
+      <div className="flex-box">
+      <Logo/>
+      <input placeholder="Usuário"></input>
+      <input placeholder="Senha" type="password"></input>
+      </div>
       <div>
         <input placeholder="Usuário" onChange={this.user_state_change}></input>
         <input placeholder="Senha" type="password" onChange={this.password_state_change}></input>
