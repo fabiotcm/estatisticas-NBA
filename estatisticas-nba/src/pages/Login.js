@@ -63,8 +63,8 @@ class Login extends React.Component {
       <div className="flex-box">
         <div id="login-card">
           <Logo/>
-          <input placeholder="Usuário" onChange={this.user_state_change}></input>
-          <input placeholder="Senha" type="password" onChange={this.password_state_change}></input>
+          <input id="user" placeholder="Usuário" onChange={this.user_state_change}></input>
+          <input id="password" placeholder="Senha" type="password" onChange={this.password_state_change}></input>
           <button onClick={this.teste_de_senha}>Login</button>
           {popup ? <div>Senha Inválida</div> : ''}
         </div>
