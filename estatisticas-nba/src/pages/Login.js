@@ -61,11 +61,7 @@ class Login extends React.Component {
 
     return(
       <div className="flex-box">
-      <Logo/>
-      <input placeholder="Usuário"></input>
-      <input placeholder="Senha" type="password"></input>
-      </div>
-      <div>
+        <Logo/>
         <input placeholder="Usuário" onChange={this.user_state_change}></input>
         <input placeholder="Senha" type="password" onChange={this.password_state_change}></input>
         <button onClick={this.teste_de_senha}>Login</button>
