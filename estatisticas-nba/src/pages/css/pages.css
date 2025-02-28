@@ -1,6 +1,49 @@
+body {
+   background-image: url('../../images/basketball_background.svg');
+   background-size: cover;
+}
+
 .flex-box {
    display: flex;
-   align-items: center;
+   align-items: center ;
+   justify-content: center;
+   width: 95%;
+   height: 800px;
+}
+
+#login-card {
+   background-color: rgb(235, 211, 167);
+   display: flex;
+   align-items: center ;
    flex-direction: column;
-   width: 90%;
+   justify-content: space-around;
+
+   width: 200px;
+   height: 300px;
+
+   border: 15px inset orange;
+   box-shadow: 20px 20px 10px rgb(40, 40, 40);
+}
+
+#user {
+   border: 2px inset orange;
+   border-radius: 4px;
+}
+
+#password {
+   border: 2px inset orange;
+   border-radius: 4px;
+}
+
+button {
+   background-color: orange;
+   border: 2px solid;
+   border-radius: 20px;
+
+   font-family: fantasy;
+   text-transform: uppercase;
+   color: rgb(88, 62, 12);
+
+   width: 70px;
+   height: 30px;
 }
