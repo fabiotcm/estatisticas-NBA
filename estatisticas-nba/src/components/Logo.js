@@ -1,11 +1,11 @@
 import React from "react";
-import ball from "../images/basketball.svg"
+import ball from "../images/basketgif.gif"
 
 class Logo extends React.Component {
   render(){
     return(
     <div>
-      <img src={ ball } alt="Basket Ball" width="150" height="150" />
+      <img id="login-img" src={ ball } alt="Basket Ball" />
     </div>
     )
   }
