@@ -34,7 +34,6 @@ class Login extends React.Component {
   teste_de_senha = () => {
     const {user} = this.state;
     const {password} = this.state;
-    const {validate_password} = this.state;
     console.log(user);
     console.log(password);
     if (password.length >= 3){
