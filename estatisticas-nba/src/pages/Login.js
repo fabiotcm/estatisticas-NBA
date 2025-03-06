@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../components/Logo";
 import "./css/pages.css"
 import { Navigate } from "react-router-dom";
+import lebron from "../images/lebron.png"
 
 
 
@@ -60,13 +61,16 @@ class Login extends React.Component {
     }
 
     return(
-      <div className="flex-box">
-        <div id="login-card">
-          <Logo/>
-          <input id="user" placeholder="Usuário" onChange={this.user_state_change}></input>
-          <input id="password" placeholder="Senha" type="password" onChange={this.password_state_change}></input>
-          <button onClick={this.teste_de_senha}>Login</button>
-          {popup ? <div>Senha Inválida</div> : ''}
+      <div className="flex-body">
+        <div className="flex-box">
+          <img id="image-card" src={ lebron } alt="king james" width="150" height="150" />
+          <div id="login-card">
+            <Logo/>
+            <input id="user" placeholder="Usuário" onChange={this.user_state_change}></input>
+            <input id="password" placeholder="Senha" type="password" onChange={this.password_state_change}></input>
+            <button onClick={this.teste_de_senha}>Login</button>
+            {popup ? <div>Senha Inválida</div> : ''}
+          </div>
         </div>
       </div>
     )

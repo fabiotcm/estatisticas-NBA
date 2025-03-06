@@ -3,47 +3,91 @@ body {
    background-size: cover;
 }
 
-.flex-box {
+.flex-body {
    display: flex;
    align-items: center ;
    justify-content: center;
    width: 95%;
-   height: 800px;
+   height: 900px;
+}
+
+.flex-box {
+   background-color: rgba(255, 255, 255, 1);
+   
+   display: flex;
+   align-items: center ;
+   justify-content: space-evenly;
+   
+   border-radius: 73px;
+
+   width: 1318px;
+   height: 606px;
+}
+
+#image-card {
+   width: 387px;
+   height: 545px;
+   top: 28px;
+   left: 33px;
+
+   border-radius: 52px;
 }
 
 #login-card {
-   background-color: rgb(235, 211, 167);
+   background-image: url('../../images/background_img_login.png');
+   background-size: cover;
    display: flex;
    align-items: center ;
    flex-direction: column;
    justify-content: space-around;
 
-   width: 200px;
-   height: 300px;
+   top: 28px;
+   left: 450px;
 
-   border: 15px inset orange;
-   box-shadow: 20px 20px 10px rgb(40, 40, 40);
+   width: 839px;
+   height: 545px;
+
+   border-radius: 52px;
+}
+
+#login-img {
+   width: 642px;
+   height: 205px;
+   top: 11px;
+   left: 105px;
+   border-radius: 15px;
 }
 
 #user {
-   border: 2px inset orange;
-   border-radius: 4px;
+   width: 642px;
+   height: 38px;
+   top: 266px;
+   left: 105px;
+   border-radius: 10px;
+   border: 0px;
 }
 
 #password {
-   border: 2px inset orange;
-   border-radius: 4px;
+   width: 642px;
+   height: 38px;
+   top: 357px;
+   left: 105px;
+   border-radius: 10px;
+   border: 0px;
 }
 
 button {
    background-color: orange;
-   border: 2px solid;
+   border: 0px;
    border-radius: 20px;
 
    font-family: fantasy;
    text-transform: uppercase;
-   color: rgb(88, 62, 12);
+   font-size: 26px;
+   color: rgba(233, 233, 233, 1);
 
-   width: 70px;
-   height: 30px;
+   width: 237px;
+   height: 52px;
+   top: 1px;
+
 }
