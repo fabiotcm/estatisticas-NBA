@@ -1,4 +1,4 @@
-const jogadores_por_temp = async () => {
+const times_nba = async () => {
 
   var myHeaders = new Headers();
   myHeaders.append("x-rapidapi-key", "b8a174623e936260e0c84d01701daa66");
@@ -10,9 +10,9 @@ const jogadores_por_temp = async () => {
     redirect: 'follow'
   };
 
-  const request = await fetch('https://v2.nba.api-sports.io/players/statistics?season=2022&id=734', requestOptions);
+  const request = await fetch('https://v2.nba.api-sports.io/teams', requestOptions);
   const requestJSON = await request.json();
   return requestJSON
 }
 
-export default jogadores_por_temp;
+export default times_nba;
