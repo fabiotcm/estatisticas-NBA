@@ -10,8 +10,8 @@ class App extends React.Component {
       <BrowserRouter>
         <Routes>
           <Route path='/' Component={Login}/>
-          <Route path='/pag1' Component={Pag1}/>
-          <Route path='/pag2' Component={Pag2}/>
+          <Route path='/Pag1' Component={Pag1}/>
+          <Route path='/Pag2' Component={Pag2}/>
         </Routes>
       </BrowserRouter>
     );
