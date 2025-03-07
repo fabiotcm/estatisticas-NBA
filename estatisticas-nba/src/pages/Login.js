@@ -2,7 +2,8 @@ import React from "react";
 import Logo from "../components/Logo";
 import "./css/login.css"
 import { Navigate } from "react-router-dom";
-import lebron from "../images/lebron.png"
+import lebron from "../images/lebron.png";
+import sound from "../images/AllOfTheLights.mp3";
 
 
 
@@ -13,6 +14,7 @@ class Login extends React.Component {
     password: '',
     validate_password : false,
     popup : false,
+    music : false,
   };
 
   user_state_change = ({ target }) => {
@@ -48,11 +50,15 @@ class Login extends React.Component {
     }
   }
 
-
+  allOfTheLights = () => {
+    this.setState(() => ({
+      music : true,
+    }))
+  }
 
   render(){
 
-    const {validate_password, popup} = this.state;
+    const {validate_password, popup, music} = this.state;
     if (validate_password){
       return(
         <Navigate to='/Teams'/>
@@ -61,8 +67,9 @@ class Login extends React.Component {
 
     return(
       <div className="flex-body">
+        {music ? <audio id="audio" autoplay controls src={sound} /> : ''}
         <div className="flex-box">
-          <img id="image-card" src={ lebron } alt="king james" width="150" height="150" />
+          <img id="image-card" src={ lebron } alt="king james" width="150" height="150" onMouseEnter={this.allOfTheLights} />
           <div id="login-card">
             <Logo/>
             <input id="user" placeholder="Usuário" onChange={this.user_state_change}></input>
