@@ -55,7 +55,7 @@ class Login extends React.Component {
     const {validate_password, popup} = this.state;
     if (validate_password){
       return(
-        <Navigate to='/Pag1'/>
+        <Navigate to='/Teams'/>
       );
     }
 

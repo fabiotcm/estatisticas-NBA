@@ -1,9 +1,9 @@
 import React from "react";
 import times_nba from "../services/nbaAPI";
-import "./css/pag1.css";
+import "./css/teams.css";
 
 
-class Pag1 extends React.Component{
+class Teams extends React.Component{
   
   state = {
     times : [],
@@ -42,4 +42,4 @@ class Pag1 extends React.Component{
   }
 }
 
-export default Pag1;
+export default Teams;
