@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
-import Pag1 from './pages/Pag1';
+import Teams from './pages/Teams';
 import Pag2 from './pages/Pag2';
 
 class App extends React.Component {
@@ -10,7 +10,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Routes>
           <Route path='/' Component={Login}/>
-          <Route path='/Pag1' Component={Pag1}/>
+          <Route path='/Teams' Component={Teams}/>
           <Route path='/Pag2' Component={Pag2}/>
         </Routes>
       </BrowserRouter>

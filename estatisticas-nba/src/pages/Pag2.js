@@ -1,10 +1,10 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class Pag2 extends React.Component {
   render(){
     return(
-      <Link to='/Pag1'>Pag1</Link>
+      <Link to='/Teams'>Pag1</Link>
     )
   }
 }
