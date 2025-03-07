@@ -34,7 +34,6 @@ class Login extends React.Component {
   teste_de_senha = () => {
     const {user} = this.state;
     const {password} = this.state;
-    const {validate_password} = this.state;
     console.log(user);
     console.log(password);
     if (password.length >= 3){
@@ -56,7 +55,7 @@ class Login extends React.Component {
     const {validate_password, popup} = this.state;
     if (validate_password){
       return(
-        <Navigate to='/pag1'/>
+        <Navigate to='/Pag1'/>
       );
     }
 
