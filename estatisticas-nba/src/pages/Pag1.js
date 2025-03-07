@@ -1,9 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import times_nba from "../services/nbaAPI";
-
-
-
+import "./css/pag1.css";
 
 
 class Pag1 extends React.Component{
@@ -29,17 +26,16 @@ class Pag1 extends React.Component{
   render(){
     const {times} = this.state;
     const array_times = times.map((time) => {
-      const logo_time = time.logo;
-      const nome_time = time.name;
-      return (<div key={nome_time}>
-        <img src={logo_time} alt={nome_time}/>
-        <div>{nome_time}</div>
-      </div>)
+      return (
+        <div className="team-card" key={time.name}>
+          <img src={time.logo} alt={time.name}/>
+        </div>)
     })
     return(
       <div>
-        <Link to='/Pag2'>Pag2</Link>
-        {array_times}
+        <div className="team-box">
+          {array_times}
+        </div>
       </div>
       
     )

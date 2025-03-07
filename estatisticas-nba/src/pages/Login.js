@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../components/Logo";
-import "./css/pages.css"
+import "./css/login.css"
 import { Navigate } from "react-router-dom";
 import lebron from "../images/lebron.png"
 
