@@ -45,16 +45,9 @@ class Teams extends React.Component{
         </div>)
     })
     
-    if (time){
-      return(
-        <Navigate to='/Pag2'/>
-      )
-    }
+    if (time) return(<Navigate to='/Pag2'/>)
 
-    if (carregando){
-      return(
-        <div>Carregando</div>
-      )
+    if (carregando) {return(<div>Carregando</div>)
     }else{
       return(
           <div>
