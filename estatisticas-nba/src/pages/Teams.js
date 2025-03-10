@@ -50,6 +50,7 @@ class Teams extends React.Component{
 
     if (carregando) {return(<Loading />)
     }else{
+      console.log(array_times);
       return(
           <div>
             <div className="team-box" onClick={this.openTeam}>
