@@ -59,11 +59,7 @@ class Login extends React.Component {
   render(){
 
     const {validate_password, popup, music} = this.state;
-    if (validate_password){
-      return(
-        <Navigate to='/Teams'/>
-      );
-    }
+    if (validate_password) return(<Navigate to='/Teams'/>);
 
     return(
       <div className="flex-body">

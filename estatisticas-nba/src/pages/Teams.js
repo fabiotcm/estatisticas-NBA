@@ -2,6 +2,7 @@ import React from "react";
 import times_nba from "../services/nbaAPI";
 import "./css/teams.css";
 import { Navigate } from "react-router";
+import Loading from "../components/Loading";
 
 
 class Teams extends React.Component{
@@ -47,7 +48,7 @@ class Teams extends React.Component{
     
     if (time) return(<Navigate to='/Pag2'/>)
 
-    if (carregando) {return(<div>Carregando</div>)
+    if (carregando) {return(<Loading />)
     }else{
       return(
           <div>
