@@ -1,6 +1,7 @@
 import React from "react";
 import times_nba from "../services/nbaAPI";
 import "./css/teams.css";
+import { Navigate } from "react-router";
 
 
 class Teams extends React.Component{
@@ -8,6 +9,7 @@ class Teams extends React.Component{
   state = {
     times : [],
     carregando : true,
+    time : false,
   };
   
   componentDidMount() {
@@ -25,10 +27,17 @@ class Teams extends React.Component{
 
   }
 
+  openTeam = () => {
+    this.setState(() =>({
+      time : true,
+    }));
+  }
+
   
   render(){
     const {times} = this.state;
     const {carregando} = this.state;
+    const {time} = this.state;
     const array_times = times.map((time) => {
       return (
         <div className="team-card" key={time.name}>
@@ -36,6 +45,12 @@ class Teams extends React.Component{
         </div>)
     })
     
+    if (time){
+      return(
+        <Navigate to='/Pag2'/>
+      )
+    }
+
     if (carregando){
       return(
         <div>Carregando</div>
@@ -43,7 +58,7 @@ class Teams extends React.Component{
     }else{
       return(
           <div>
-            <div className="team-box">
+            <div className="team-box" onClick={this.openTeam}>
               {array_times}
             </div>
           </div>

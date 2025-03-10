@@ -67,7 +67,7 @@ class Login extends React.Component {
 
     return(
       <div className="flex-body">
-        {music ? <audio id="audio" autoplay controls src={sound} /> : ''}
+        {music ? <audio id="audio" autoPlay controls src={sound} /> : ''}
         <div className="flex-box">
           <img id="image-card" src={ lebron } alt="king james" width="150" height="150" onMouseEnter={this.allOfTheLights} />
           <div id="login-card">
