@@ -7,6 +7,7 @@ class Teams extends React.Component{
   
   state = {
     times : [],
+    carregando : true,
   };
   
   componentDidMount() {
@@ -18,27 +19,38 @@ class Teams extends React.Component{
     const {response} = todos_times;
     let lista_times_nba = response.filter((x) => x.nbaFranchise);
     this.setState(() => ({
-      times : lista_times_nba
+      times : lista_times_nba,
+      carregando : false,
     }))
+
   }
 
   
   render(){
     const {times} = this.state;
+    const {carregando} = this.state;
     const array_times = times.map((time) => {
       return (
         <div className="team-card" key={time.name}>
           <img src={time.logo} alt={time.name}/>
         </div>)
     })
-    return(
-      <div>
-        <div className="team-box">
-          {array_times}
-        </div>
-      </div>
-      
-    )
+    
+    if (carregando){
+      return(
+        <div>Carregando</div>
+      )
+    }else{
+      return(
+          <div>
+            <div className="team-box">
+              {array_times}
+            </div>
+          </div>
+      )
+
+    }
+    
   }
 }
 
