@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import times_nba from "../services/nbaAPI";
 import "./css/teams.css";
 import { Navigate } from "react-router";
 import Loading from "../components/Loading";
+import NBAContext from "../context/NBAContext";
 
 
 class Teams extends React.Component{
@@ -32,6 +33,8 @@ class Teams extends React.Component{
     this.setState(() =>({
       time : true,
     }));
+    let nba = this.context;
+    nba.mudarV();
   }
 
   
@@ -63,5 +66,6 @@ class Teams extends React.Component{
     
   }
 }
+Teams.contextType = NBAContext;
 
 export default Teams;
