@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import times_nba from "../services/nbaAPI";
+import nbaManager from "../services/nbaAPI";
 import "./css/teams.css";
 import { Navigate } from "react-router";
 import Loading from "../components/Loading";
@@ -19,7 +19,7 @@ class Teams extends React.Component{
   }
 
   lista_times = async () => {
-    const todos_times = await times_nba();
+    const todos_times = await nbaManager.times_nba();
     const {response} = todos_times;
     let lista_times_nba = response.filter((x) => x.nbaFranchise);
     this.setState(() => ({
