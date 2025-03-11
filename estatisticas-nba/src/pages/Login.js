@@ -14,7 +14,6 @@ class Login extends React.Component {
     password: '',
     validate_password : false,
     popup : false,
-    music : false,
   };
 
   user_state_change = ({ target }) => {
@@ -51,28 +50,23 @@ class Login extends React.Component {
   }
 
   allOfTheLights = () => {
-    this.setState(() => ({
-      music : true,
-    }))
+    const audio = document.getElementById('audio');
+    audio.play();
   }
 
   render(){
 
-    const {validate_password, popup, music} = this.state;
-    if (validate_password){
-      return(
-        <Navigate to='/Teams'/>
-      );
-    }
+    const {validate_password, popup} = this.state;
+    if (validate_password) return(<Navigate to='/Teams'/>);
 
     return(
       <div className="flex-body">
-        {music ? <audio id="audio" autoPlay controls src={sound} /> : ''}
+        <audio id="audio" src={sound} />
         <div className="flex-box">
-          <img id="image-card" src={ lebron } alt="king james" width="150" height="150" onMouseEnter={this.allOfTheLights} />
+          <img id="image-card" src={ lebron } alt="king james" width="150" height="150" />
           <div id="login-card">
             <Logo/>
-            <input id="user" placeholder="Usuário" onChange={this.user_state_change}></input>
+            <input id="user" placeholder="Usuário" onChange={this.user_state_change} onClick={this.allOfTheLights} ></input>
             <input id="password" placeholder="Senha" type="password" onChange={this.password_state_change}></input>
             <button onClick={this.teste_de_senha}>Login</button>
             {popup ? <div>Senha Inválida</div> : ''}
