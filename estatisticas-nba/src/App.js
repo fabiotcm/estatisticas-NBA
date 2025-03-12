@@ -9,8 +9,8 @@ function App () {
 
   const [v, setV] = useState('');
 
-  const mudarV = () => {
-    setV('Deu certo');
+  const mudarV = (x) => {
+    setV(x);
   }
 
   const context = {
