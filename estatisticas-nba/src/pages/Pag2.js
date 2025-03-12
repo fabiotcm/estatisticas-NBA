@@ -1,6 +1,5 @@
-import React, {useContext} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Loading from "../components/Loading";
 import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
 
@@ -8,6 +7,8 @@ class Pag2 extends React.Component {
   
   componentDidMount() {
     console.log(this.lista_estatisticas_time());
+    let nba = this.context;
+    console.log(nba.v);
   }
 
   lista_estatisticas_time = async () => {
@@ -19,7 +20,6 @@ class Pag2 extends React.Component {
     return(
       <div>
         <Link to='/Teams'>Pag1</Link>
-        
       </div>
     )
   }
