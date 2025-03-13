@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Teams from './pages/Teams';
-import Pag2 from './pages/Pag2';
+import Stats from './pages/Stats';
 import NBAContext from './context/NBAContext';
 
 function App () {
@@ -24,7 +24,7 @@ function App () {
           <Routes>
             <Route path='/' Component={Login}/>
             <Route path='/Teams' Component={Teams}/>
-            <Route path='/Pag2' Component={Pag2}/>
+            <Route path='/Stats' Component={Stats}/>
           </Routes>
         </BrowserRouter>
       </NBAContext.Provider>
