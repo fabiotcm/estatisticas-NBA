@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React from "react";
 import nbaManager from "../services/nbaAPI";
 import "./css/teams.css";
 import { Navigate } from "react-router";
@@ -20,6 +20,7 @@ class Teams extends React.Component{
 
   lista_times = async () => {
     const todos_times = await nbaManager.times_nba();
+    console.log(todos_times);
     const {response} = todos_times;
     let lista_times_nba = response.filter((x) => x.nbaFranchise);
     this.setState(() => ({
@@ -29,14 +30,12 @@ class Teams extends React.Component{
 
   }
 
-  openTeam = (props) => {
-    
-
+  openTeam = (id) => {
     this.setState(() =>({
       time : true,
     }));
-
-    console.log(props.value);
+    let nba = this.context;
+    nba.mudarV(id);
   }
 
   
@@ -46,7 +45,7 @@ class Teams extends React.Component{
     const {time} = this.state;
     const array_times = times.map((time) => {
       return (
-        <div className="team-card" key={time.id} onClick={this.openTeam}>
+        <div className="team-card" key={time.id} onClick={ () => this.openTeam(time.id) }>
           <img src={time.logo} alt={time.name}/>
         </div>)
     })
