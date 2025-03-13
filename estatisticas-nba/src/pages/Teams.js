@@ -29,12 +29,14 @@ class Teams extends React.Component{
 
   }
 
-  openTeam = () => {
+  openTeam = (props) => {
+    
+
     this.setState(() =>({
       time : true,
     }));
-    let nba = this.context;
-    nba.mudarV();
+
+    console.log(props.value);
   }
 
   
@@ -44,7 +46,7 @@ class Teams extends React.Component{
     const {time} = this.state;
     const array_times = times.map((time) => {
       return (
-        <div className="team-card" key={time.name}>
+        <div className="team-card" key={time.id} onClick={this.openTeam}>
           <img src={time.logo} alt={time.name}/>
         </div>)
     })
@@ -56,7 +58,7 @@ class Teams extends React.Component{
       console.log(array_times);
       return(
           <div>
-            <div className="team-box" onClick={this.openTeam}>
+            <div className="team-box">
               {array_times}
             </div>
           </div>
