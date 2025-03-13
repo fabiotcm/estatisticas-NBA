@@ -50,7 +50,7 @@ class Teams extends React.Component{
         </div>)
     })
     
-    if (time) return(<Navigate to='/Pag2'/>)
+    if (time) return(<Navigate to='/Stats'/>)
 
     if (carregando) {return(<Loading />)
     }else{
