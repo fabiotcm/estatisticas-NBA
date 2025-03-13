@@ -30,12 +30,13 @@ class Teams extends React.Component{
 
   }
 
-  openTeam = (id) => {
+  openTeam = (id, logo) => {
     this.setState(() =>({
       time : true,
     }));
     let nba = this.context;
-    nba.mudarV(id);
+    nba.mudarTeamID(id);
+    nba.mudarTeamLogo(logo);
   }
 
   
@@ -45,7 +46,7 @@ class Teams extends React.Component{
     const {time} = this.state;
     const array_times = times.map((time) => {
       return (
-        <div className="team-card" key={time.id} onClick={ () => this.openTeam(time.id) }>
+        <div className="team-card" key={time.id} onClick={ () => this.openTeam(time.id, time.logo) }>
           <img src={time.logo} alt={time.name}/>
         </div>)
     })
