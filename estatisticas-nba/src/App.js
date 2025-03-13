@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Teams from './pages/Teams';
 import Stats from './pages/Stats';
 import NBAContext from './context/NBAContext';
+import Player from './pages/Player';
 
 function App () {
 
@@ -25,6 +26,7 @@ function App () {
             <Route path='/' Component={Login}/>
             <Route path='/Teams' Component={Teams}/>
             <Route path='/Stats' Component={Stats}/>
+            <Route path='/Player' Component={Player}/>
           </Routes>
         </BrowserRouter>
       </NBAContext.Provider>
