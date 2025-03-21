@@ -4,6 +4,7 @@ import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
 import "../pages/css/stats.css";
 import StatsBox from "../components/StatsBox";
+import PlayerBox from "../components/PlayerBox";
 
 class Stats extends React.Component {
 
@@ -23,11 +24,6 @@ class Stats extends React.Component {
     return estatisticas;
   }
 
-  lista_jogadores_time = async (id) => {
-    const jogadores = await nbaManager.jogadores_time(id);
-    return jogadores;
-  }
-
   render(){
     const { logo } = this.state;
     return(
@@ -35,6 +31,7 @@ class Stats extends React.Component {
         <Link to='/Teams'>Voltar</Link>
         <div className="flex-body">
           <StatsBox logo={ logo }/>
+          <PlayerBox/>
         </div>
       </div>
     )

@@ -33,7 +33,7 @@ function App () {
             <Route path='/' Component={Login}/>
             <Route path='/Teams' Component={Teams}/>
             <Route path='/Stats' Component={Stats}/>
-            <Route path='/Player' Component={ Player } />
+            <Route path='/Player' Component={Player}/>
           </Routes>
         </BrowserRouter>
       </NBAContext.Provider>
