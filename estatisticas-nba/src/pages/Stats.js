@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
 import "../pages/css/stats.css";
+import StatsBox from "../components/StatsBox";
 
 class Stats extends React.Component {
 
@@ -33,12 +34,7 @@ class Stats extends React.Component {
       <div>
         <Link to='/Teams'>Voltar</Link>
         <div className="flex-body">
-          <div id="stats-box">
-            <div className="test-box" >
-              {logo ? <img src={logo} alt="Logo Clube" /> : ''}
-            </div>
-            <div className="test-box-2"></div>
-          </div>
+          <StatsBox logo={ logo }/>
         </div>
       </div>
     )
