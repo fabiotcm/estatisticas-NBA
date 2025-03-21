@@ -1,12 +1,11 @@
 import React from "react";
 
 class Player extends React.Component {
-  render(){
+  render() {
     return(
-      <div>Jogador</div>
+        <div>Jogador</div>
     )
   }
-
 }
 
 export default Player;
