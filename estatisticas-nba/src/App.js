@@ -10,6 +10,7 @@ function App () {
 
   const [team_id, setTeamID] = useState('');
   const [team_logo, setTeamLogo] = useState('');
+  const [player_id, setPlayerId] = useState('');
 
   const mudarTeamID = (x) => {
     setTeamID(x);
@@ -19,11 +20,17 @@ function App () {
     setTeamLogo(x);
   }
 
+  const mudarPlayerId = (x) => {
+    setPlayerId(x);
+  }
+
   const context = {
     team_id,
     mudarTeamID,
     team_logo,
     mudarTeamLogo,
+    player_id,
+    mudarPlayerId,
   };
 
   return(
