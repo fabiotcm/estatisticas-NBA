@@ -31,10 +31,18 @@ const jogadores_time = async (id) => {
   return requestJSON;
 }
 
+const estatistica_jogador = async (id) => {
+  const request = await fetch(`https://v2.nba.api-sports.io/players/statistics?season=2022&id=${id}`, requestOptions);
+  const requestJSON = await request.json();
+  return requestJSON;
+   
+}
+
 const nbaManager = {
   times_nba, 
   estatistica_time,
   jogadores_time,
+  estatistica_jogador,
 };
 
 
