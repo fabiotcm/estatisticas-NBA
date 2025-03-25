@@ -1,6 +1,7 @@
 import React from "react";
 import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
+import lista_estatisticas_jogador from "../helper/Helper";
 
 class Player extends React.Component {
 
@@ -18,26 +19,22 @@ class Player extends React.Component {
     const {response} = estatisticas_jogador; 
     console.log(response);
     this.setState(() => (({
-      points : response,
+      jogos : response,
     })))
   };
 
-  lista_estatisticas_jogador = (jogos) => {
-    const numJogos = jogos.lenght;
-    const total_pontos = 0;
-    total_pontos = jogos.forEach(jogo => {
-      total_pontos = media_pontos + jogo.points;
-    });
-    const media_pontos = total_pontos / numJogos;
-    return media_pontos;
-  }
+  
    
   render() {
+    const {jogos} = this.state;
+    console.log(jogos);
+    const stats = lista_estatisticas_jogador(jogos);
+    console.log(stats);
+
     
     return(
         <div>
           <div>Jogador</div>
-          <div>{id}</div>
         </div>
     )
   }
