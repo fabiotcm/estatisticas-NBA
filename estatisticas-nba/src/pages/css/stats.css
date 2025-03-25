@@ -1,7 +1,49 @@
+.stats-flex-body {
+    align-items: center;
+}
+
+#player-card-box {
+    margin: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#player-card {
+    background-color: rgb(194, 194, 202);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 10px;
+    width: 150px;
+    height: 200px;
+
+    border: 10px inset orange;
+    box-shadow: 10px 10px 5px rgb(56, 56, 56);
+
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+#player-card:hover {
+    -webkit-transform: scale(110%);
+    transform: scale(110%);
+}
+
 #stats-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats-card-box {
     background-color: rgb(194, 194, 202);
     opacity: 0.9;
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +54,10 @@
     border-radius: 52px;
 }
 
-.test-box {
+.logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0.9;
 
     width: 50%;

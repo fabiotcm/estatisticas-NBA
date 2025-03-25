@@ -5,10 +5,12 @@ class StatsBox extends React.Component {
     const logo = this.props.logo;
     return(
         <div id="stats-box">
-          <div className="test-box" >
-            {logo ? <img src={logo} alt="Logo Clube" /> : ''}
+          <div id="stats-card-box">
+            <div className="logo-box" >
+              {logo ? <img src={logo} alt="Logo Clube" width='400' height='400'/> : ''}
+            </div>
+            <div className="test-box-2"></div>
           </div>
-          <div className="test-box-2"></div>
         </div>
     )
   }

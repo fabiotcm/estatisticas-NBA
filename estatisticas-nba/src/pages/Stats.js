@@ -29,7 +29,7 @@ class Stats extends React.Component {
     return(
       <div>
         <Link to='/Teams'>Voltar</Link>
-        <div className="flex-body">
+        <div className="stats-flex-body">
           <StatsBox logo={ logo }/>
           <PlayerBox/>
         </div>

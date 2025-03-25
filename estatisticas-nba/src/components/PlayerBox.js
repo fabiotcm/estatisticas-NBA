@@ -35,7 +35,7 @@ class PlayerBox extends React.Component{
     console.log(lista_jogadores);
     const array_jogadores = lista_jogadores.map((jogador) =>{
       return(
-        <div key={jogador.id} onClick={() => this.go_to_player(jogador.id)}>
+        <div id="player-card" key={jogador.id} onClick={() => this.go_to_player(jogador.id)}>
           <div>{jogador.firstname}</div>
           <div>{jogador.lastname}</div>
         </div>
@@ -45,7 +45,7 @@ class PlayerBox extends React.Component{
     if(to_player) return(<Navigate to='/Player'/>)
     
     return(
-      <div>{array_jogadores}</div>
+      <div id="player-card-box">{array_jogadores}</div>
     )
   }
 
