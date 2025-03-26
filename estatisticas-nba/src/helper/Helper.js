@@ -57,23 +57,23 @@ const lista_estatisticas_jogador = (jogos) => {
   
   
   const tabela = {
-    "Jogador": nome_jogador,
-    "Time": nome_time,
-    "Posição": posicao,
-    "Média de Pontos": media_pontos,
-    "Média de Assistências": media_assists,
-    "Média de Rebotes": media_rebotes,
-    "Média de Bloqueios": media_bloqueios,
-    "Média de Roubos": media_roubos,
-    "Média de Faltas": media_faltas,
-    "Média de Turnovers": media_turnovers,
-    "Aproveitamento de Arremessos": porcentagem_arremessos,
-    "Média de Minutos": media_minutos,
-    "Aproveitamento de 3 Pontos": porcentagem_tres_pontos,
-    "Média de Tentativas de Arremessos por Jogo": media_arremessos,
-    "Média de Tentativas de Arremessos de 3 Pontos por jogo": media_tres_pontos,
-    "Aproveitamento de Lances Livres": porcentagem_lance_livre,
-    "Média de Lances Livres por Jogo": media_lances_livres,
+    nome_jogador, //Jogador
+    nome_time, //Time
+    posicao,  //Posição
+    media_pontos, //Média de Pontos
+    media_assists, //Média de Assistências
+    media_rebotes, //Média de Rebotes
+    media_bloqueios, //Média de Bloqueios
+    media_roubos, //Média de Roubos
+    media_faltas, //Média de Faltas
+    media_turnovers, //Média de Turnovers
+    porcentagem_arremessos, //Aproveitamento de Arremessos
+    media_minutos, //Média de Minutos
+    porcentagem_tres_pontos, //Aproveitamento de 3 Pontos
+    media_arremessos, //Média de Tentativas de Arremessos por Jogo
+    media_tres_pontos, //Média de Tentativas de Arremessos de 3 Pontos por jogo
+    porcentagem_lance_livre, //Aproveitamento de Lances Livres
+    media_lances_livres, //Média de Lances Livres por Jogo
   };
 
   

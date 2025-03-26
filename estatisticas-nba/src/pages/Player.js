@@ -23,18 +23,51 @@ class Player extends React.Component {
     })))
   };
 
-  
    
   render() {
     const {jogos} = this.state;
     console.log(jogos);
     const stats = lista_estatisticas_jogador(jogos);
-    console.log(stats);
+    const {
+      nome_jogador, //Jogador
+      nome_time, //Time
+      posicao,  //Posição
+      media_pontos, //Média de Pontos
+      media_assists, //Média de Assistências
+      media_rebotes, //Média de Rebotes
+      media_bloqueios, //Média de Bloqueios
+      media_roubos, //Média de Roubos
+      media_faltas, //Média de Faltas
+      media_turnovers, //Média de Turnovers
+      porcentagem_arremessos, //Aproveitamento de Arremessos
+      media_minutos, //Média de Minutos
+      porcentagem_tres_pontos, //Aproveitamento de 3 Pontos
+      media_arremessos, //Média de Tentativas de Arremessos por Jogo
+      media_tres_pontos, //Média de Tentativas de Arremessos de 3 Pontos por jogo
+      porcentagem_lance_livre, //Aproveitamento de Lances Livres
+      media_lances_livres, //Média de Lances Livres por Jogo
+    } = stats;
 
     
     return(
         <div>
-          <div>Jogador</div>
+          <div>{nome_jogador}</div>
+          <div>{nome_time}</div>
+          <div>{posicao}</div>
+          <div>{media_pontos}</div>
+          <div>{media_assists}</div>
+          <div>{media_rebotes}</div>
+          <div>{media_bloqueios}</div>
+          <div>{media_roubos}</div>
+          <div>{media_faltas}</div>
+          <div>{media_turnovers}</div>
+          <div>{porcentagem_arremessos}</div>
+          <div>{media_minutos}</div>
+          <div>{porcentagem_tres_pontos}</div>
+          <div>{media_arremessos}</div>
+          <div>{media_tres_pontos}</div>
+          <div>{porcentagem_lance_livre}</div>
+          <div>{media_lances_livres}</div>
         </div>
     )
   }
