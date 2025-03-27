@@ -1,7 +1,31 @@
 import React from "react";
+import nbaManager from "../services/nbaAPI";
+import NBAContext from "../context/NBAContext";
 
 class StatsBox extends React.Component {
+
+  state = {
+    estatisticas: [],
+  };
+
+  componentDidMount() {
+    const id = this.context.team_id;
+    this.lista_estatisticas_time(id);
+  }
+
+  lista_estatisticas_time = async (id) => {
+    const estatisticas = await nbaManager.estatistica_time(id);
+    const { response } = estatisticas;
+    if (response.length > 0) {
+      this.setState(()=>({
+        estatisticas: response[0],
+      }));
+    }
+  }
+
   render() {
+    const { estatisticas } = this.state;
+    console.log(estatisticas);
     const logo = this.props.logo;
     return(
         <div id="stats-box">
@@ -15,5 +39,6 @@ class StatsBox extends React.Component {
     )
   }
 }
+StatsBox.contextType = NBAContext;
 
 export default StatsBox;
