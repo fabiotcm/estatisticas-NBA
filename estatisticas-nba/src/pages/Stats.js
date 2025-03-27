@@ -17,13 +17,17 @@ class Stats extends React.Component {
     this.setState(()=>({
       logo: nba.team_logo,
     }));
+    const time_stats = this.lista_estatisticas_time();
+    console.log(time_stats);
   }
 
-  lista_estatisticas_time = async (id) => {
+  lista_estatisticas_time = async () => {
+    const id = this.context.team_id;
     const estatisticas = await nbaManager.estatistica_time(id);
     return estatisticas;
   }
 
+  
   render(){
     const { logo } = this.state;
     return(
