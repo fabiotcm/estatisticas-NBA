@@ -1,0 +1,42 @@
+#stats-player-body {
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    width: 95%;
+    height: 800px;
+}
+
+.stats-player-box {
+    background-color: beige;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+
+    margin-top: 8%;
+    width: 800px;
+    height: 800px;
+
+    border: 5px inset orange;
+    border-radius: 50px;
+}
+
+#stats-player-title {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+}
+
+#stats-player-title h1 {
+    flex: 1;
+    text-align: center;
+}
+
+#stats-player-logo {
+   position: absolute;
+   padding-left: 20px;
+   padding-top: 10px;
+}
