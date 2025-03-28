@@ -19,7 +19,7 @@ const times_nba = async () => {
 
 const estatistica_time = async (id) => {
 
-  const request = await fetch(`https://v2.nba.api-sports.io/teams/statistics?season=2022&id=${id}`, requestOptions);
+  const request = await fetch(`https://v2.nba.api-sports.io/standings?league=standard&season=2022&team=${id}`, requestOptions);
   const requestJSON = await request.json();
   return requestJSON;
 }
