@@ -2,6 +2,7 @@ import React from "react";
 import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
 import lista_estatisticas_jogador from "../helper/Helper";
+import "../pages/css/player.css";
 
 class Player extends React.Component {
 
@@ -25,6 +26,7 @@ class Player extends React.Component {
 
    
   render() {
+    const logo = this.context.team_logo;
     const {jogos} = this.state;
     console.log(jogos);
     const stats = lista_estatisticas_jogador(jogos);
@@ -50,24 +52,29 @@ class Player extends React.Component {
 
     
     return(
-        <div>
-          <div>{nome_jogador}</div>
-          <div>{nome_time}</div>
-          <div>{posicao}</div>
-          <div>{media_pontos}</div>
-          <div>{media_assists}</div>
-          <div>{media_rebotes}</div>
-          <div>{media_bloqueios}</div>
-          <div>{media_roubos}</div>
-          <div>{media_faltas}</div>
-          <div>{media_turnovers}</div>
-          <div>{porcentagem_arremessos}</div>
-          <div>{media_minutos}</div>
-          <div>{porcentagem_tres_pontos}</div>
-          <div>{media_arremessos}</div>
-          <div>{media_tres_pontos}</div>
-          <div>{porcentagem_lance_livre}</div>
-          <div>{media_lances_livres}</div>
+        <div id="stats-player-body">
+          <div className="stats-player-box">
+            <div id="stats-player-title">
+              <img id="stats-player-logo" src={logo} alt="Logo Clube" width='100' height='100'/>
+              <h1>{nome_jogador}</h1>
+            </div>
+            <h2>{nome_time}</h2>
+            <div>{posicao}</div>
+            <div>{media_pontos}</div>
+            <div>{media_assists}</div>
+            <div>{media_rebotes}</div>
+            <div>{media_bloqueios}</div>
+            <div>{media_roubos}</div>
+            <div>{media_faltas}</div>
+            <div>{media_turnovers}</div>
+            <div>{porcentagem_arremessos}</div>
+            <div>{media_minutos}</div>
+            <div>{porcentagem_tres_pontos}</div>
+            <div>{media_arremessos}</div>
+            <div>{media_tres_pontos}</div>
+            <div>{porcentagem_lance_livre}</div>
+            <div>{media_lances_livres}</div>
+          </div>
         </div>
     )
   }
