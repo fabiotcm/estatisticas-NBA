@@ -1,6 +1,7 @@
 import React from "react";
 import nbaManager from "../services/nbaAPI";
 import NBAContext from "../context/NBAContext";
+import helperManager from "../helper/Helper";
 
 class StatsBox extends React.Component {
 
@@ -16,16 +17,17 @@ class StatsBox extends React.Component {
   lista_estatisticas_time = async (id) => {
     const estatisticas = await nbaManager.estatistica_time(id);
     const { response } = estatisticas;
-    if (response.length > 0) {
-      this.setState(()=>({
-        estatisticas: response[0],
-      }));
-    }
+    this.setState(()=>({
+        estatisticas: response,
+    }));
+    
   }
 
   render() {
     const { estatisticas } = this.state;
     console.log(estatisticas);
+    const stats = helperManager.tratar_estatisticas_time(estatisticas);
+    console.log(stats);
     const logo = this.props.logo;
     return(
         <div id="stats-box">
