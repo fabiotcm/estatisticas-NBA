@@ -84,13 +84,13 @@ const lista_estatisticas_jogador = (jogos) => {
 const tratar_estatisticas_time = (season) => {
   
   const temporada = season[0];
-  const {win, loss, conference} = temporada;
-  const colocacao = conference.rank;
-  const vitorias_totais = conference.win;
-  const derrotas_totais = conference.loss;
-  const aproveitamento_partidas = win.percentage;
-  const recorde_casa = win.home + '/' + loss.home;
-  const recorde_fora = win.away + '/' + loss.away;
+
+  const {win, loss, conference} = temporada || {};
+  const {colocacao, vitorias_totais, derrotas_totais} = conference || {};
+
+  const aproveitamento_partidas = win?.percentage;
+  const recorde_casa = win?.home + '/' + loss?.home;
+  const recorde_fora = win?.away + '/' + loss?.away;
   
   const tabela = {
     colocacao,

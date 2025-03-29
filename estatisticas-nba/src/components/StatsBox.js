@@ -20,7 +20,7 @@ class StatsBox extends React.Component {
     this.setState(()=>({
         estatisticas: response,
     }));
-
+    
   }
 
   render() {
