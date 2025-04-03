@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
 import helperManager from "../helper/Helper";
@@ -52,6 +53,8 @@ class Player extends React.Component {
 
     
     return(
+      <div>
+        <Link to='/Stats'>Voltar</Link>
         <div id="stats-player-body">
           <div className="stats-player-box">
             <div id="stats-player-title">
@@ -76,6 +79,7 @@ class Player extends React.Component {
             <div>{media_lances_livres}</div>
           </div>
         </div>
+      </div>      
     )
   }
 }

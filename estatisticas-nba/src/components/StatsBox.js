@@ -25,7 +25,6 @@ class StatsBox extends React.Component {
 
   render() {
     const { estatisticas } = this.state;
-    console.log(estatisticas);
     const stats = helperManager.tratar_estatisticas_time(estatisticas);
     console.log(stats);
     const logo = this.props.logo;
