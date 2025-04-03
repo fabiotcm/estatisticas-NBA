@@ -2,6 +2,7 @@ import React from "react";
 import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
 import helperManager from "../helper/Helper";
+import "../pages/css/player.css";
 
 class Player extends React.Component {
 
