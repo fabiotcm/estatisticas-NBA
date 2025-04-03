@@ -76,8 +76,37 @@ const lista_estatisticas_jogador = (jogos) => {
     media_lances_livres, //Média de Lances Livres por Jogo
   };
 
+
   
   return tabela; 
-  }
+}
 
-export default lista_estatisticas_jogador;
+const tratar_estatisticas_time = (season) => {
+  
+  const temporada = season[0];
+
+  const {win, loss, conference} = temporada || {};
+  const {colocacao, vitorias_totais, derrotas_totais} = conference || {};
+
+  const aproveitamento_partidas = win?.percentage;
+  const recorde_casa = win?.home + '/' + loss?.home;
+  const recorde_fora = win?.away + '/' + loss?.away;
+  
+  const tabela = {
+    colocacao,
+    vitorias_totais,
+    derrotas_totais,
+    aproveitamento_partidas,
+    recorde_casa,
+    recorde_fora,
+  } 
+
+  return tabela;
+};
+
+const helperManager = {
+  lista_estatisticas_jogador,
+  tratar_estatisticas_time,
+}
+
+export default helperManager;

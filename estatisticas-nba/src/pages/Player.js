@@ -1,8 +1,7 @@
 import React from "react";
 import NBAContext from "../context/NBAContext";
 import nbaManager from "../services/nbaAPI";
-import lista_estatisticas_jogador from "../helper/Helper";
-import "../pages/css/player.css";
+import helperManager from "../helper/Helper";
 
 class Player extends React.Component {
 
@@ -29,7 +28,7 @@ class Player extends React.Component {
     const logo = this.context.team_logo;
     const {jogos} = this.state;
     console.log(jogos);
-    const stats = lista_estatisticas_jogador(jogos);
+    const stats = helperManager.lista_estatisticas_jogador(jogos);
     const {
       nome_jogador, //Jogador
       nome_time, //Time
