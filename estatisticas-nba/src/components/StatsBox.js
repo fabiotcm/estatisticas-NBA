@@ -25,17 +25,30 @@ class StatsBox extends React.Component {
 
   render() {
     const { estatisticas } = this.state;
-    console.log(estatisticas);
-    const stats = helperManager.tratar_estatisticas_time(estatisticas);
-    console.log(stats);
     const logo = this.props.logo;
+    const stats = helperManager.tratar_estatisticas_time(estatisticas);
+    const {
+      aproveitamento_partidas,
+      colocacao,
+      derrotas_totais,
+      recorde_casa,
+      recorde_fora,
+      vitorias_totais,
+    } = stats;
     return(
         <div id="stats-box">
           <div id="stats-card-box">
             <div className="logo-box" >
               {logo ? <img src={logo} alt="Logo Clube" width='400' height='400'/> : ''}
             </div>
-            <div className="test-box-2"></div>
+            <div className="main-box">
+              <label>Aproveitamento<div>{aproveitamento_partidas}</div></label>
+              <label>Colocacao<div>{colocacao}</div></label>
+              <label>Derrotas Totais<div>{derrotas_totais}</div></label>
+              <label>Recorde Casa<div>{recorde_casa}</div></label>
+              <label>Recorde Fora<div>{recorde_fora}</div></label>
+              <label>Vitorias Totais<div>{vitorias_totais}</div></label>
+            </div>
           </div>
         </div>
     )
